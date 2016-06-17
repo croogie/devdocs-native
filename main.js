@@ -71,6 +71,10 @@ function createWindow() {
   local.mainWindow.on('closed', function () {
     local.mainWindow = null
   })
+
+  local.mainWindow.on('blur', function () {
+    local.mainWindow.hide();
+  })
 }
 
 function showWindow() {
